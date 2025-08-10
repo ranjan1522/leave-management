@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Apply for Leave</h2>
+
+  {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+
+  <form method="POST" action="{{ url_for('apply_leave') }}">
+    <div class="mb-3">
+      <label for="start_date" class="form-label">Start Date</label>
+      <input type="date" name="start_date" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="end_date" class="form-label">End Date</label>
+      <input type="date" name="end_date" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="leave_type" class="form-label">Leave Type</label>
+      <select name="leave_type" class="form-select" required>
+        <option value="">Select</option>
+        <option value="Sick">Sick</option>
+        <option value="Casual">Casual</option>
+        <option value="Earned">Earned</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="reason" class="form-label">Reason</label>
+      <textarea name="reason" class="form-control" required minlength="10"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

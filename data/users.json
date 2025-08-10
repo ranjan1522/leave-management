@@ -1,0 +1,15 @@
+{
+    "student1": {
+      "password": "pass123",
+      "leave_quota": 10
+    },
+    "student2": {
+      "password": "hello456",
+      "leave_quota": 8
+    },
+    "student3": {
+      "password": "secure789",
+      "leave_quota": 12
+    }
+  }
+  
