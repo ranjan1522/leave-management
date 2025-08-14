@@ -1,2 +1,10 @@
 Flask
 gunicorn
+selenium
+webdriver-manager
+pytest
+pytest-html
+pytest-xdist
+python-dotenv
+beautifulsoup4
+lxml
